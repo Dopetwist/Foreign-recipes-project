@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+
+  <main class="outter-container">
+    <!-- The Home Section -->
+    <h1 class="home-h1">Explore your favorite Foreign Recipes.</h1>
+
+    <div class="text">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores distinctio vero dicta cupiditate fugiat. 
+        Ducimus eius voluptates minima veniam accusamus quaerat, magni quam obcaecati, ea dolorum fugit! Debitis 
+        provident saepe ipsa porro reiciendis asperiores quod quae incidunt 
+        quas fuga blanditiis, corrupti, dolores tempore minima ipsam illum animi, ea officia aliquam?
+      </p>
+    </div>
+
+    <div class="search">
+      <h3>How do you want to Search?</h3>
+
+      <form action="/" method="POST">
+        <input type="submit" value="Search by name" class="btn a" formaction="/name-search">
+        <input type="submit" value="Search meals by first letter" class="btn b" formaction="/letter-search">
+        <input type="submit" value="List all meals Categories" class="btn c" formaction="/category-search"> 
+        <input type="submit" value="Filter by Area" class="btn d" formaction="/area-search">
+        <input type="submit" value="Lookup a Random meal" class="btn e" formaction="/random-search">
+      </form>
+    </div>
+
+    <div class="images">
+
+      <!-- Displays a random meal on each Reload -->
+      <div class="recipe1 recipe">
+
+        <% if (locals.apiData) { %> 
+          <h2> <%= apiData.meals[0].strMeal %> </h2>
+
+          <div class="img-con">
+            <img src="<%= apiData.meals[0].strMealThumb %>" alt="Recipe Image">
+          </div>
+        <% } %> 
+
+
+        <% if (locals.message) { %> 
+          <p class="err-msg err-margin"> <%= message %> </p>
+        <% } %>
+
+      </div>
+
+      <!-- Displays a permanent meal -->
+      <div class="recipe2 recipe">
+        <% if (locals.staticMeal) { %> 
+          <h2> <%= staticMeal.meals[0].strMeal %> </h2>
+  
+          <div class="img-con">
+            <img src="<%= staticMeal.meals[0].strMealThumb %>" alt="Recipe Image">
+          </div>
+        <% } %> 
+      </div>
+    </div>
+  </main>
+
+<%- include("partials/footer.ejs") %>

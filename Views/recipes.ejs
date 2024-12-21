@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+    <main class="outter-container">
+
+        <% if (locals.message) { %> 
+            <p class="err-msg err-margin2"> <%= message %> </p>
+        <% } %>
+         
+        <div class="container sub-con">
+            <div class="recipe-display">
+
+                <!-- Displaying all the recipes under a selected Category or Area -->
+                <% if (locals.apiData) { %> 
+    
+                    <h2>Recipes:</h2>
+    
+                    <% apiData.meals.forEach((item) => { %> 
+                        <ul>
+                            <li>
+                                <a href="/meal/<%= item.idMeal %>"> <%= item.strMeal %> </a>
+                            </li>
+                        </ul>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+<%- include("partials/footer.ejs") %>
