@@ -233,7 +233,7 @@ ul li a:hover {
     width: 70%;
     border-radius: 2rem;
     margin-top: 1rem;
-    box-shadow: 0 0 1.5rem gray;
+    box-shadow: 0 0 1.5rem #808080;
 }
 
 .recipe img {
