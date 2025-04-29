@@ -6,11 +6,11 @@ Users can easily search for foreign dishes with preparation instructions from an
 
 ## Key Feature
 
-Search feature with the following options;
-    1.  Search by name.
-    2.  Search meals by first letter.
-    3.  List all meals categories.
-    4.  Filter by Area.
+Search feature with the following options;  
+    1.  Search by name.  
+    2.  Search meals by first letter.  
+    3.  List all meals categories.  
+    4.  Filter by Area.  
     5.  Lookup a random meal.
 
 ## Installation
@@ -21,14 +21,14 @@ Use `npm i` to install all the packages on the node terminal.
 
 On the terminal, use `nodemon index.js` to start the server.
 
-## Tech Stack used
+## Tech Stack used  
 
-• Node.js
-• Express.js
-• JavaScript
-• EJS (templating engine)
+• Node.js  
+• Express.js  
+• JavaScript  
+• EJS (templating engine)  
 • HTML
-• CSS
+• CSS  
 • RESTful API
 
 ## Contributing
