@@ -27,7 +27,7 @@ On the terminal, use `nodemon index.js` to start the server.
 • Express.js  
 • JavaScript  
 • EJS (templating engine)  
-• HTML
+• HTML  
 • CSS  
 • RESTful API
 
