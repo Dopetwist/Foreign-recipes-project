@@ -1,24 +1,29 @@
 <%- include("partials/header.ejs") %>
 
-    <main class="outter-container" id="srch-con">
-
-        <!-- Search input field for recipes of a particular alphabet -->
-        <div class="container search-container">
-            <div class="search-bar">
-                <form action="/display-search2" method="POST">
+    <main>
+        <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
         
-                    <label for="search">Search for Meals with an Alphabet:</label>
-                    <br>
-                    
-                    <input type="text" id="input" name="input" placeholder="Enter an Alphabet..." maxlength="1"> 
-        
-                    <input type="submit" value="Search" class="search-btn btn2">
-                    
-                </form>
-        
-                <% if (locals.message) { %> 
-                    <p class="err-msg"> <%= message %> </p>
-                <% } %> 
+        <div class="outter-container" id="srch-con">
+            <div class="input-con">
+                <!-- Search input field for recipes of a particular alphabet -->
+                <div class="container search-container">
+                    <div class="search-bar">
+                        <form action="/display-search2" method="POST">
+                
+                            <label for="search">Search for Meals with an Alphabet:</label>
+                            <br>
+                            
+                            <input type="text" id="input" name="input" placeholder="Enter an Alphabet..." maxlength="1"> 
+                
+                            <input type="submit" value="Search" class="search-btn btn2">
+                            
+                        </form>
+                
+                        <% if (locals.message) { %> 
+                            <p class="err-msg"> <%= message %> </p>
+                        <% } %> 
+                    </div>
+                </div>
             </div>
         </div>
     </main>

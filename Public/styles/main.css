@@ -33,18 +33,32 @@ header {
     background-repeat: no-repeat;
 }
 
-main.outter-container {
+.outter-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #fffafa;
-    min-height: calc(100vh - 11rem);
+    min-height: calc(100vh - 12rem);
     margin: 2rem 9%;
     border-radius: 1rem;
 }
 
+.outter-container h1 {
+    margin-top: 1rem;
+    color: var(--second-main-color);
+}
+
+.outter-container h1.home-h1 {
+    margin: 2rem 0;
+}
+
+.input-con {
+    width: 100%;
+}
+
 #srch-con {
     justify-content: center;
+    margin: 0 9% 2rem;
 }
 
 div.container {
@@ -55,19 +69,20 @@ div.container {
     border-radius: 1rem;
 }
 
-main.outter-container h1 {
-    margin-top: 1rem;
-    color: var(--second-main-color);
-}
-
-main.outter-container h1.home-h1 {
-    margin: 2rem 0;
-}
-
 div.sub-con {
     display: flex;
     align-items: start;
     padding: 3rem 6rem;
+}
+
+.back-arrow {
+    font-size: 2rem;
+    color: #000;
+    margin: 0.5rem 7%;
+}
+
+.back-arrow:hover {
+    cursor: pointer;
 }
 
 .meal {
@@ -151,7 +166,6 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: var(--second-main-color); */
     margin: 2rem 0;
 }
 

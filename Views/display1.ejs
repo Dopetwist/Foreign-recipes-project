@@ -1,34 +1,37 @@
 <%- include("partials/header.ejs") %>
 
-  <main class="outter-container meal">
+  <main>
+    <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
 
-    <!-- Displaying the full details of a specific meal from the API. -->
+    <div class="outter-container meal" id="srch-con">
+      <!-- Displaying the full details of a specific meal from the API. -->
 
-    <div class="meal-display">
+      <div class="meal-display">
 
-      <% if (locals.message) { %> 
-        <p class="err-msg err-margin"> <%= message %> </p>
-      <% } %>
+        <% if (locals.message) { %> 
+          <p class="err-msg err-margin"> <%= message %> </p>
+        <% } %>
 
 
-      <% if (locals.apiData) { %> 
-        <% apiData.meals.forEach((item) => { %>  
-          <div class="single-meal">
-            <h1> <%= item.strMeal %> - ( Category: <%= item.strCategory %> ) </h1>
+        <% if (locals.apiData) { %> 
+          <% apiData.meals.forEach((item) => { %>  
+            <div class="single-meal">
+              <h1> <%= item.strMeal %> - ( Category: <%= item.strCategory %> ) </h1>
 
-            <p class="area"> <%= item.strArea %> </p>
+              <p class="area"> <%= item.strArea %> </p>
 
-            <div class="imgg">
-              <img src="<%= item.strMealThumb %>" alt="Recipe Image">
+              <div class="imgg">
+                <img src="<%= item.strMealThumb %>" alt="Recipe Image">
+              </div>
+
+              <p class="prep"> Preparation Instructions: </p>
+          
+              <p class="instruct"> <%= item.strInstructions %> </p>
             </div>
+          <% }); %>  
+        <% } %> 
 
-            <p class="prep"> Preparation Instructions: </p>
-        
-            <p class="instruct"> <%= item.strInstructions %> </p>
-          </div>
-        <% }); %>  
-      <% } %> 
-
+      </div>
     </div>
   </main>
 

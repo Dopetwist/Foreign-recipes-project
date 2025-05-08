@@ -19,7 +19,6 @@ app.get("/", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "random.php");
         const result2 = await axios.get(API_URL + "lookup.php?i=52945");
-        console.log(result.data);
 
         res.render("index.ejs", {apiData: result.data, staticMeal: result2.data});
     } catch (error) {
@@ -36,7 +35,7 @@ app.get("/", async (req, res) => {
         // Error handling for any other unexpected and unforeseen errors.
         } else {
             console.error("Error:", error.message);
-            res.status(500).send("An error occured, please try again!");
+            res.render("index.ejs", { message: "An error occured, please try again!" });
         }
     }
 });
@@ -48,7 +47,7 @@ app.post("/name-search", (req, res) => {
         res.render("search1.ejs");
     } catch (error) {
         console.error("Error:", error.message);
-        res.status(500).send("An error occured, please try again!");
+        res.render("search1.ejs", { message: "An error occured, please try again!" });
     }
 });
 
@@ -104,7 +103,7 @@ app.post("/letter-search", (req, res) => {
         res.render("search2.ejs");
     } catch (error) {
         console.error("Error:", error.message);
-        res.status(500).send("An error occured, please try again!");
+        res.render("search2.ejs", { message: "An error occured, please try again!" });
     }
 });
 
@@ -300,7 +299,6 @@ app.post("/random-search", async (req, res) => {
         const result = await axios.get(API_URL + "random.php");
         const apiData = result.data;
 
-        console.log(apiData);
 
         res.render("display1.ejs", { apiData });
     } catch (error) {

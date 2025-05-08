@@ -1,27 +1,30 @@
 <%- include("partials/header.ejs") %>
 
-    <main class="outter-container">
+    <main>
+        <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
 
-        <% if (locals.message) { %> 
-            <p class="err-msg err-margin2"> <%= message %> </p>
-        <% } %>
-         
-        <div class="container sub-con">
-            <div class="display">
-            
-                <!-- This section lists all Areas of recipes -->
-                <% if (locals.apiData) { %> 
-    
-                    <h2> Areas: </h2>
-    
-                    <% apiData.meals.forEach((item) => { %> 
-                        <ul>
-                            <li>
-                                <a href="/area/<%= item.strArea %>"> <%= item.strArea %> </a>
-                            </li>
-                        </ul>
-                    <% }); %>
-                <% } %>
+        <div class="outter-container" id="srch-con">
+            <% if (locals.message) { %> 
+                <p class="err-msg err-margin2"> <%= message %> </p>
+            <% } %>
+             
+            <div class="container sub-con">
+                <div class="display">
+                
+                    <!-- This section lists all Areas of recipes -->
+                    <% if (locals.apiData) { %> 
+        
+                        <h2> Areas: </h2>
+        
+                        <% apiData.meals.forEach((item) => { %> 
+                            <ul>
+                                <li>
+                                    <a href="/area/<%= item.strArea %>"> <%= item.strArea %> </a>
+                                </li>
+                            </ul>
+                        <% }); %>
+                    <% } %>
+                </div>
             </div>
         </div>
 
