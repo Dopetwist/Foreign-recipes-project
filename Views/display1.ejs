@@ -1,7 +1,11 @@
 <%- include("partials/header.ejs") %>
 
   <main>
-    <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
+    <% if (page === "recipes") { %> 
+      <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
+    <% } else { %> 
+      <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
+    <% } %> 
 
     <div class="outter-container meal" id="srch-con">
       <!-- Displaying the full details of a specific meal from the API. -->
