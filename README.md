@@ -11,7 +11,7 @@ Search feature with the following options;
     2.  Search meals by first letter.  
     3.  List all meals categories.  
     4.  Filter by Area.  
-    5.  Lookup a random meal.
+    5.  Lookup a Random meal.
 
 ## Installation
 
