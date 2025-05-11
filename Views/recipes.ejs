@@ -19,7 +19,7 @@
                         <% apiData.meals.forEach((item) => { %> 
                             <ul>
                                 <li>
-                                    <a href="/meal/<%= item.idMeal %>?currentPage=recipes"> <%= item.strMeal %> </a>
+                                    <a href="/meal/<%= item.idMeal %>?currentPage=recipes&category=<%= category %>"> <%= item.strMeal %> </a>
                                 </li>
                             </ul>
                         <% }); %>

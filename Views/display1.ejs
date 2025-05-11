@@ -1,8 +1,8 @@
 <%- include("partials/header.ejs") %>
 
   <main>
-    <% if (page === "recipes") { %> 
-      <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
+    <% if (currentPage === "recipes") { %> 
+      <a href="/category/<%= category %>"><i class='bx bx-arrow-back back-arrow'></i></a>
     <% } else { %> 
       <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
     <% } %> 
