@@ -1,7 +1,11 @@
 <%- include("partials/header.ejs") %>
 
     <main>
-        <a href="/category-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+        <% if (locals.category) { %> 
+            <a href="/category-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+        <% } else { %> 
+            <a href="/area-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+        <% } %>
 
         <div class="outter-container" id="srch-con">
             <% if (locals.message) { %> 
@@ -19,7 +23,11 @@
                         <% apiData.meals.forEach((item) => { %> 
                             <ul>
                                 <li>
-                                    <a href="/meal/<%= item.idMeal %>?currentPage=recipes&category=<%= category %>"> <%= item.strMeal %> </a>
+                                    <% if (locals.category) { %> 
+                                        <a href="/meal/<%= item.idMeal %>?currentPage=recipes&category=<%= category %>"> <%= item.strMeal %> </a>
+                                    <% } else { %>
+                                        <a href="/meal/<%= item.idMeal %>?currentPage=recipes&area=<%= area %>"> <%= item.strMeal %> </a>
+                                    <% } %> 
                                 </li>
                             </ul>
                         <% }); %>

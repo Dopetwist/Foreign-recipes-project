@@ -1,9 +1,11 @@
 <%- include("partials/header.ejs") %>
 
   <main>
-    <% if (currentPage === "recipes") { %> 
+    <% if (currentPage === "recipes" && category) { %> 
       <a href="/category/<%= category %>"><i class='bx bx-arrow-back back-arrow'></i></a>
-    <% } else { %> 
+    <% } else if (currentPage === "recipes" && area) { %> 
+      <a href="/area/<%= area %>"><i class='bx bx-arrow-back back-arrow'></i></a>
+    <% } else { %>
       <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
     <% } %> 
 
