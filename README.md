@@ -7,11 +7,11 @@ Users can easily search for foreign dishes with preparation instructions from an
 ## Key Feature
 
 Search feature with the following options;  
-    1.  Search by name.  
-    2.  Search meals by first letter.  
-    3.  List all meals categories.  
-    4.  Filter by Area.  
-    5.  Lookup a Random meal.
+    ✔️  Search by name.  
+    ✔️  Search meals by first letter.  
+    ✔️  List all meals categories.  
+    ✔️  Filter by Area.  
+    ✔️  Lookup a Random meal.
 
 ## Installation
 
