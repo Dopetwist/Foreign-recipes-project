@@ -17,7 +17,9 @@ Search feature with the following options;
 
 ## Installation
 
-Use `npm i` to install all the packages on the node terminal.
+* Clone this repo.
+* cd to the project's directory.
+* Use `npm i` to install all dependencies on the node terminal.
 
 ## Running the Server
 
