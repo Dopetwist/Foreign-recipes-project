@@ -23,7 +23,9 @@ Search feature with the following options;
 
 ## Running the Server
 
-On the terminal, use `nodemon index.js` to start the server.
+On the terminal, use `nodemon index.js` to start the server.   
+
+Open `http://localhost:3000` in your browser.
 
 ## Tech Stack used  
 
