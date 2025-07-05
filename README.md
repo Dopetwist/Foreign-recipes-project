@@ -19,7 +19,7 @@ Search feature with the following options;
 
 * Clone this repo.
 * cd to the project's directory.
-* Use `npm i` to install all dependencies on the node terminal.
+* Use `npm install` to install all dependencies.
 
 ## Running the Server
 
