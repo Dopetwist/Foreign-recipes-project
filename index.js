@@ -53,7 +53,9 @@ app.get("/name-search", (req, res) => {
 
 
 // This route takes the user input and displays the exact meal details accessed from the API data.
-app.get("/display-search1", async (req, res) => {
+app.post("/display-search1", async (req, res) => {
+
+    const { currentPage, category, area } = req.query;
 
     const userInput = req.body.input;
 
@@ -72,26 +74,26 @@ app.get("/display-search1", async (req, res) => {
 
         // When there is no search result, this error message will be rendered.
         if (!apiData.meals) {
-            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null});
+            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null, currentPage, category, area });
         }
 
         // When a search result is available, this will be rendered.
-        res.render("display1.ejs", { message: null, apiData });
+        res.render("display1.ejs", { message: null, apiData, currentPage, category, area });
     } catch (error) {
         // This error triggers when the error response status code from the API is outside 2xx range.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("display1.ejs", { message: "No data available for your search!", apiData: null});
+            res.render("display1.ejs", { message: "No data available for your search!", apiData: null, currentPage, category, area });
 
         // This error triggers when a request was made but the API didn't respond.
         } else if (error.request) {
             console.error("The API is not responding:", error.request);
-            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null });
+            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null, currentPage, category, area });
 
         // This aspect handles any other unexpected and unforeseen errors.
         } else {
             console.error("Error:", error.message);
-            res.render("display1.ejs", { message: "An error occured, please try again.", apiData: null });
+            res.render("display1.ejs", { message: "An error occured, please try again.", apiData: null, currentPage, category, area });
         }
     }
 });
@@ -109,7 +111,7 @@ app.get("/letter-search", (req, res) => {
 
 
 // This route displays all the recipes of a particular alphabet searched by a user.
-app.get("/display-search2", async (req, res) => {
+app.post("/display-search2", async (req, res) => {
 
     const userInput = req.body.input;
 
