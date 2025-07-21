@@ -25,9 +25,11 @@
                                 <li>
                                     <% if (locals.category) { %> 
                                         <a href="/meal/<%= item.idMeal %>?currentPage=recipes&category=<%= category %>"> <%= item.strMeal %> </a>
-                                    <% } else { %>
+                                    <% } else if (locals.area) { %>
                                         <a href="/meal/<%= item.idMeal %>?currentPage=recipes&area=<%= area %>"> <%= item.strMeal %> </a>
-                                    <% } %> 
+                                    <% } else { %> 
+                                        <a href="/meal/<%= item.idMeal %>"> <%= item.strMeal %> </a>
+                                    <% } %>
                                 </li>
                             </ul>
                         <% }); %>
