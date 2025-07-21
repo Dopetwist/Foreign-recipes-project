@@ -304,7 +304,7 @@ app.get("/random-search", async (req, res) => {
 
         const { currentPage, category, area } = req.query;
 
-        const esult = await axios.get(API_URL + "random.php");
+        const result = await axios.get(API_URL + "random.php");
         const apiData = result.data;
 
 
