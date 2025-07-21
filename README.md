@@ -9,6 +9,7 @@ Users can easily search for foreign dishes with preparation instructions from an
 ## Key Feature
 
 Search feature with the following options;  
+
     ✔️  Search by name.  
     ✔️  Search meals by first letter.  
     ✔️  List all meals categories.  
