@@ -1,13 +1,21 @@
 <%- include("partials/header.ejs") %>
 
   <main>
-    <% if (currentPage === "recipes" && category) { %> 
-      <a href="/category/<%= category %>"><i class='bx bx-arrow-back back-arrow'></i></a>
-    <% } else if (currentPage === "recipes" && area) { %> 
-      <a href="/area/<%= area %>"><i class='bx bx-arrow-back back-arrow'></i></a>
-    <% } else { %>
-      <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
-    <% } %> 
+    <div class="arrow-con">
+      <% if (currentPage === "recipes" && category) { %> 
+        <a href="/category/<%= category %>"><i class='bx bx-arrow-back back-arrow'></i></a>
+      <% } else if (currentPage === "recipes" && area) { %> 
+        <a href="/area/<%= area %>"><i class='bx bx-arrow-back back-arrow'></i></a>
+      <% } else { %>
+        <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
+      <% } %> 
+
+      <% if (locals.random) { %> 
+        <form action="/random-search" method="GET">
+          <button type="submit" value="Lookup a Random meal" name="random" id="get-meal"> Get Random Meal </button>
+        </form>
+      <% } %>
+    </div>
 
     <div class="outter-container meal" id="srch-con">
       <!-- Displaying the full details of a specific meal from the API. -->

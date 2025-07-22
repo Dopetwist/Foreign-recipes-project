@@ -52,6 +52,27 @@ header {
     margin: 2rem 0;
 }
 
+.arrow-con {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 9%;
+}
+
+#get-meal {
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    transition: .2s ease;
+}
+
+#get-meal:hover {
+    cursor: pointer;
+    background-color: #b22222;
+}
+
 .input-con {
     width: 100%;
 }

@@ -302,13 +302,15 @@ app.get("/area/:strArea", async (req, res) => {
 app.get("/random-search", async (req, res) => {
     try {
 
-        const { currentPage, category, area } = req.query;
+        const { currentPage, category, area, random } = req.query;
+
+        // const randomBtn = req.body.random;
 
         const result = await axios.get(API_URL + "random.php");
         const apiData = result.data;
 
 
-        res.render("display1.ejs", { apiData, currentPage, category, area });
+        res.render("display1.ejs", { apiData, currentPage, category, area, random });
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
