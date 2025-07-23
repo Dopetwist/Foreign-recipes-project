@@ -61,7 +61,7 @@ app.post("/display-search1", async (req, res) => {
 
     // Error handling message if user sends an empty input field request.
     if (!userInput) {
-        return res.render("search1.ejs", { message: "Error: Input is required!", apiData: null});
+        return res.render("search1.ejs", { message: "Error: Input is required!", apiData: null });
     }
 
     try {
@@ -70,7 +70,7 @@ app.post("/display-search1", async (req, res) => {
         });
         const apiData = result.data;
 
-        console.log(apiData);
+        // console.log(apiData);
 
         // When there is no search result, this error message will be rendered.
         if (!apiData.meals) {
@@ -129,7 +129,7 @@ app.post("/display-search2", async (req, res) => {
         });
         const apiData = result.data;
 
-        console.log(apiData);
+        // console.log(apiData);
 
         // When there is no search result, this error message will be rendered.
         if (!apiData.meals) {

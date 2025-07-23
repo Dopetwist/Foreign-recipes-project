@@ -3,8 +3,10 @@
     <main>
         <% if (locals.category) { %> 
             <a href="/category-search"><i class='bx bx-arrow-back back-arrow'></i></a>
-        <% } else { %> 
+        <% } else if (locals.area) { %> 
             <a href="/area-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+        <% } else { %>
+            <a href="/letter-search"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } %>
 
         <div class="outter-container" id="srch-con">
