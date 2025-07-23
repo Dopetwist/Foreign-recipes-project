@@ -30,7 +30,7 @@
                                     <% } else if (locals.area) { %>
                                         <a href="/meal/<%= item.idMeal %>?currentPage=recipes&area=<%= area %>"> <%= item.strMeal %> </a>
                                     <% } else { %> 
-                                        <a href="/meal/<%= item.idMeal %>"> <%= item.strMeal %> </a>
+                                        <a href="/meal/<%= item.idMeal %>?currentPage=letterPage"> <%= item.strMeal %> </a>
                                     <% } %>
                                 </li>
                             </ul>
