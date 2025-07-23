@@ -6,9 +6,13 @@
         <a href="/category/<%= category %>"><i class='bx bx-arrow-back back-arrow'></i></a>
       <% } else if (currentPage === "recipes" && area) { %> 
         <a href="/area/<%= area %>"><i class='bx bx-arrow-back back-arrow'></i></a>
+      <% } else if (currentPage === "search1") { %>
+        <a href="/name-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+      <% } else if (currentPage === "search2") { %> 
+        <a href="/display-search2"><i class='bx bx-arrow-back back-arrow'></i></a>
       <% } else { %>
         <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
-      <% } %> 
+      <% } %>
 
       <% if (locals.random) { %> 
         <form action="/random-search" method="GET">
