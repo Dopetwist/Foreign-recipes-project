@@ -10,8 +10,8 @@
         <a href="/name-search"><i class='bx bx-arrow-back back-arrow'></i></a>
       <% } else if (currentPage === "search2") { %> 
         <a href="/display-search2"><i class='bx bx-arrow-back back-arrow'></i></a>
-      <% } else if (currentPage === "letterPage") { %> <!-- To be worked on. -->
-        <!-- <a href="/display-search2"><i class='bx bx-arrow-back back-arrow'></i></a> -->
+      <% } else if (currentPage === "letterPage" && letter) { %>
+        <a href="/previous/<%= letter %>"><i class='bx bx-arrow-back back-arrow'></i></a>
       <% } else { %>
         <a href="/"><i class='bx bx-arrow-back back-arrow'></i></a>
       <% } %>

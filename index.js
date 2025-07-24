@@ -137,7 +137,7 @@ app.post("/display-search2", async (req, res) => {
         }
 
         // When a search result is available, this will be rendered.
-        res.render("recipes.ejs", { message: null, apiData, currentPage, category, area });
+        res.render("recipes.ejs", { message: null, apiData, currentPage, category, area, input: userInput });
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code
         if (error.response) {
@@ -158,15 +158,35 @@ app.post("/display-search2", async (req, res) => {
 });
 
 
+// Go back to the list of meals of a particular alphabet
+app.get("/previous/:letter", async (req, res ) => {
+    try {
+        const letter = req.params.letter;
+
+        const userInput = letter;
+
+        const result = await axios.get(API_URL + "search.php?f=" + userInput, {
+            params: { userInput }
+        });
+        const apiData = result.data;
+
+        res.render("recipes.ejs", { apiData, input: userInput });
+    } catch (error) {
+        console.error("Error:", error.message);
+        res.render("recipes.ejs", { message: "An error occured, please try again!" });
+    }
+});
+
+
 // Look-up the recipe's details from the API and displays it's relevant data.
 app.get("/meal/:idMeal", async (req, res) => {
     try {
-        const { currentPage, category, area } = req.query;
+        const { currentPage, category, area, letter } = req.query;
         const uniqueID = req.params.idMeal;
         const result = await axios.get(API_URL + "lookup.php?i=" + uniqueID);
         const apiData = result.data;
 
-        res.render("display1.ejs", { apiData, currentPage, category, area });
+        res.render("display1.ejs", { apiData, currentPage, category, area, letter });
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
