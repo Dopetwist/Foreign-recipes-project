@@ -8,14 +8,16 @@ Users can easily search for foreign dishes with preparation instructions from an
 
 ## 🔑 Key Features
 
-Search feature with the following options;  
-
+*  Search feature with the following options;
+  
     ✔️  Search by name.  
     ✔️  Search meals by first letter.  
     ✔️  List all meals categories.  
     ✔️  Filter by Area.  
     ✔️  Lookup a Random meal.
-
+   
+*  User-friendly Interface.
+  
 ## 🛠️ Tech Stack used  
 
 *  Node.js  
