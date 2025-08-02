@@ -191,17 +191,17 @@ app.get("/meal/:idMeal", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null});
+            res.render("display1.ejs", { message: "No meal data available to display!", apiData: null, currentPage: null });
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
             console.error("The API is not responding:", error.request);
-            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null });
+            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null, currentPage: null });
 
         // Error handling for any other unexpected and unforeseen errors.
         } else {
             console.error("Error:", error.message);
-            res.render("display1.ejs", { message: "An error occured, please try again.", apiData: null });
+            res.render("display1.ejs", { message: "An error occured, please try again.", apiData: null, currentPage: null });
         }
     }
 });
@@ -245,7 +245,7 @@ app.get("/category/:strCategory", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("recipes.ejs", { message: "No category available to display!", apiData: null});
+            res.render("recipes.ejs", { message: "No category meals available to display!", apiData: null});
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
@@ -302,7 +302,7 @@ app.get("/area/:strArea", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("recipes.ejs", { message: "No Area available to display!", apiData: null});
+            res.render("recipes.ejs", { message: "No meals for this Area available!", apiData: null});
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
@@ -335,12 +335,12 @@ app.get("/random-search", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("display1.ejs", { message: "No random meal available to display!", apiData: null, currentPage, category, area });
+            res.render("display1.ejs", { message: "No random meal available to display!", apiData: null, currentPage: null, category: null, area: null });
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
             console.error("The API is not responding:", error.request);
-            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null, currentPage, category, area });
+            res.render("display1.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null, currentPage: null, category: null, area: null });
 
         // Error handling for any other unexpected and unforeseen errors.
         } else {
