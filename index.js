@@ -170,10 +170,23 @@ app.get("/previous/:letter", async (req, res ) => {
         });
         const apiData = result.data;
 
-        res.render("recipes.ejs", { apiData, input: userInput });
+        res.render("recipes.ejs", { apiData, input: userInput, category: null, message: null, area: null });
     } catch (error) {
-        console.error("Error:", error.message);
-        res.render("recipes.ejs", { message: "An error occured, please try again!" });
+        // Error handling if the API responds with a non-2xx status code.
+        if (error.response) {
+            console.error("API Error:", error.response.status, error.response.data);
+            res.render("recipes.ejs", { message: "No meal data available!", category: '', area: '', apiData: null });
+
+        // Error handling if a request was made but the API didn't respond.
+        } else if (error.request) {
+            console.error("The API is not responding:", error.request);
+            res.render("recipes.ejs", { message: "Something went wrong while fetching data, please try again later.", category: '', area: '', apiData: null });
+
+         // Error handling for any other unexpected and unforeseen errors.
+        } else {
+            console.error("Error:", error.message);
+            res.render("recipes.ejs", { message: "An error occured, please try again!", category: '', area: '', apiData: null });
+        }
     }
 });
 
@@ -211,7 +224,8 @@ app.get("/meal/:idMeal", async (req, res) => {
 app.get("/category-search", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "list.php?c=list");
-        console.log(result.data);
+        // console.log(result.data);
+        
         res.render("search3.ejs", {apiData: result.data});
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code.
@@ -245,17 +259,17 @@ app.get("/category/:strCategory", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("recipes.ejs", { message: "No category meals available to display!", apiData: null});
+            res.render("recipes.ejs", { message: "No category meals available to display!", category: null, apiData: null});
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
             console.error("The API is not responding:", error.request);
-            res.render("recipes.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null });
+            res.render("recipes.ejs", { message: "Something went wrong while fetching data, please try again later.", category: null, apiData: null });
 
         // Error handling for any other unexpected and unforeseen errors.
         } else {
             console.error("Error:", error.message);
-            res.render("recipes.ejs", { message: "An error occured, please try again.", apiData: null });
+            res.render("recipes.ejs", { message: "An error occured, please try again.", category: null, apiData: null });
         }
     }
 });
@@ -302,17 +316,17 @@ app.get("/area/:strArea", async (req, res) => {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
             console.error("API Error:", error.response.status, error.response.data);
-            res.render("recipes.ejs", { message: "No meals for this Area available!", apiData: null});
+            res.render("recipes.ejs", { message: "No meals for this Area available!", area: null, apiData: null});
 
         // Error handling if a request was made but the API didn't respond.
         } else if (error.request) {
             console.error("The API is not responding:", error.request);
-            res.render("recipes.ejs", { message: "Something went wrong while fetching data, please try again later.", apiData: null });
+            res.render("recipes.ejs", { message: "Something went wrong while fetching data, please try again later.", area: null, apiData: null });
 
         // Error handling for any other unexpected and unforeseen errors.
         } else {
             console.error("Error:", error.message);
-            res.render("recipes.ejs", { message: "An error occured, please try again.", apiData: null });
+            res.render("recipes.ejs", { message: "An error occured, please try again.", area: null, apiData: null });
         }
     }
 });
