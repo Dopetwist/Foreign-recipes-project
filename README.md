@@ -30,15 +30,17 @@ Users can easily search for foreign dishes with preparation instructions from an
 
 ## 📦 Installation
 
-* Clone this repo `git clone https://github.com/Dopetwist/Foreign-recipes-project.git`
-* cd to the project's directory.
-* Use `npm install` to install all dependencies.
+*  Clone this repo  
+
+    `git clone https://github.com/Dopetwist/Foreign-recipes-project.git`
+* cd `Foreign-recipes-project`
+* Run `npm install` to install all dependencies.
 
 ## 🌐 Running the Server
 
 On the terminal, use `nodemon index.js` to start the server.   
 
-Open `http://localhost:3000` in your browser.
+Open `http://localhost:3000` in your browser to view the app.
 
 ## Contributing 🤝
 
