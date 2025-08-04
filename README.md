@@ -30,7 +30,7 @@ Users can easily search for foreign dishes with preparation instructions from an
 
 ## 📦 Installation
 
-* Clone this repo.
+* Clone this repo `git clone https://github.com/Dopetwist/Foreign-recipes-project.git`
 * cd to the project's directory.
 * Use `npm install` to install all dependencies.
 
