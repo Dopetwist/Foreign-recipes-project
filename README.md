@@ -2,7 +2,7 @@
 
 This Node.js project was solely based on the integration of a public API on the Backend Server of the application.
 
-It fetches meals data from the API and displays on the client-side for users interactions.
+It fetches meals data from the public API and displays on the client-side for users interactions.
 
 Users can easily search for foreign dishes with preparation instructions from any of the search options available.
 
