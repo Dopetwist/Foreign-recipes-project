@@ -1,6 +1,6 @@
 # Recipes App 🍝🥪
 
-This Node.js project was solely based on the integration of a public API on the Backend Server of the application.
+A Node.js project solely based on the integration of a public API on the Backend Server of the application.
 
 It fetches meals data from the public API and displays on the client-side for users interactions.
 
