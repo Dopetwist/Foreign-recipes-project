@@ -265,7 +265,7 @@ ul li a:hover {
 }
 
 .recipe .img-con {
-    width: 70%;
+    width: 60%;
     border-radius: 2rem;
     margin-top: 1rem;
     box-shadow: 0 0 1.5rem #808080;
@@ -350,4 +350,96 @@ footer {
     align-items: center;
     color: var(--text-color);
     background-color: var(--second-main-color);
+}
+
+
+/* Mobile */
+
+@media (max-width: 479px) {
+    .outter-container h1.home-h1 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+
+    .search h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .recipe h2 {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        text-align: center;
+    }
+
+    .search form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Portrait Tablet  */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .outter-container h1.home-h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+
+     .recipe .img-con {
+        width: 50%;
+    }
+
+    .search form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Landscape Tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .outter-container h1.home-h1 {
+        text-align: center;
+        margin: 2rem 1rem;
+    }
+
+     .recipe .img-con {
+        width: 50%;
+    }
+
+    .search form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Laptop */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    
+    .outter-container {
+        margin: 2rem 7%;
+    }
+    
+    .recipe .img-con {
+        width: 50%;
+    }
+}
+
+/* Desktops */
+
+@media (min-width: 1200px) {
+    
 }
