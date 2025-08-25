@@ -383,6 +383,38 @@ footer {
         font-size: 0.8rem;
     }
 
+    .search-bar form {
+        width: 80%;
+    }
+
+    .search-bar form label {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #input {
+        width: 90%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .display h2, .recipe-display h2 {
+        font-size: 1.2rem;
+    }
+
+    div.sub-con {
+        padding: 3rem 3rem;
+    }
+
+    .outter-container h1 {
+        font-size: 1.3rem;
+    }
+
+    #get-meal {
+        font-size: 0.7rem;
+    }
+
     footer p {
         font-size: 0.8rem;
     }
@@ -405,6 +437,33 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+    .search-bar form {
+        width: 80%;
+    }
+
+    .search-bar form label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #input {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    div.sub-con {
+        padding: 3rem 4rem;
+    }
+
+    .outter-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #get-meal {
+        font-size: 0.7rem;
+    }
 }
 
 /* Landscape Tablet */
@@ -423,6 +482,19 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+     .search-bar form {
+        width: 80%;
+    }
+
+    #input {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    .outter-container h1 {
+        font-size: 1.6rem;
+    }
 }
 
 /* Laptop */
@@ -436,10 +508,22 @@ footer {
     .recipe .img-con {
         width: 50%;
     }
+
+    .search form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .outter-container h1 {
+        font-size: 1.7rem;
+    }
 }
 
 /* Desktops */
 
-@media (min-width: 1200px) {
-    
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .search form {
+        display: flex;
+        flex-direction: column;
+    }
 }
