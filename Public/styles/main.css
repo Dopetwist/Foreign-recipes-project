@@ -122,11 +122,19 @@ div.sub-con {
 }
 
 .meal .meal-display p.area {
-    color: var(--header-color);
+    color: var(--second-text-color);
 }
 
 .meal .meal-display p.instruct {
     color: var(--second-text-color);
+}
+
+.meal .meal-display p.prep {
+    font-size: 1rem;
+}
+
+.arrow-con {
+    margin: 1rem 5%;
 }
 
 .single-meal {
@@ -269,11 +277,14 @@ ul li a:hover {
     border-radius: 2rem;
     margin-top: 1rem;
     box-shadow: 0 0 1.5rem #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .recipe img {
     width: 100%;
-    border-radius: 2rem;
 }
 
 .recipe2 {
@@ -310,10 +321,8 @@ ul li a:hover {
 
 .search-btn {
     margin: 1rem;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.9rem;
     padding: 0.4rem 1.3rem;
-    letter-spacing: 0.1rem;
     border-radius: 0.5rem;
     border: none;
     background-color: var(--btn-a);
@@ -339,7 +348,7 @@ ul li a:hover {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     border-radius: 0.8rem;
-    border: 0.2rem solid var(--second-main-color);
+    border: 0.15rem solid var(--second-main-color);
 }
 
 footer {
@@ -367,8 +376,17 @@ footer {
         text-align: center;
     }
 
+    .text {
+        width: 90%;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
     .recipe h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-right: 0.5rem;
         margin-left: 0.5rem;
         text-align: center;
@@ -383,14 +401,34 @@ footer {
         font-size: 0.8rem;
     }
 
+    .back-arrow {
+        font-size: 1.6rem;
+    }
+
     .search-bar form {
-        width: 80%;
+        width: 100%;
     }
 
     .search-bar form label {
         font-size: 1rem;
         font-weight: 500;
         text-align: center;
+    }
+
+    .recipe .img-con {
+        width: 80%;
+    }
+
+    .imgg {
+        width: 100%;
+    }
+
+    #srch-con {
+        margin: 0 4% 2rem;
+    }
+
+    .meal {
+        padding: 2rem 1rem;
     }
 
     #input {
@@ -408,11 +446,29 @@ footer {
     }
 
     .outter-container h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .meal .meal-display p.area {
+        font-size: 0.9rem;
+    }
+
+    .meal .meal-display p.instruct {
+        font-size: 0.9rem;
     }
 
     #get-meal {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .err-msg {
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    .outter-container {
+        margin: 2rem 5%;
     }
 
     footer p {
