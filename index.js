@@ -70,7 +70,6 @@ app.post("/display-search1", async (req, res) => {
         });
         const apiData = result.data;
 
-        // console.log(apiData);
 
         // When there is no search result, this error message will be rendered.
         if (!apiData.meals) {
@@ -128,8 +127,6 @@ app.post("/display-search2", async (req, res) => {
             params: { userInput }
         });
         const apiData = result.data;
-
-        // console.log(apiData);
 
         // When there is no search result, this error message will be rendered.
         if (!apiData.meals) {
@@ -224,7 +221,6 @@ app.get("/meal/:idMeal", async (req, res) => {
 app.get("/category-search", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "list.php?c=list");
-        // console.log(result.data);
         
         res.render("search3.ejs", {apiData: result.data});
     } catch (error) {
@@ -280,8 +276,6 @@ app.get("/area-search", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "list.php?a=list");
         const apiData = result.data;
-
-        console.log(apiData);
 
         res.render("search4.ejs", { apiData });
     } catch (error) {
