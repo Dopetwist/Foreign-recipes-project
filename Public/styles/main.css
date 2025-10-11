@@ -96,10 +96,18 @@ div.sub-con {
     padding: 3rem 6rem;
 }
 
+.arrow-link {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 7%;
+    text-decoration: none;
+}
+
 .back-arrow {
     font-size: 2rem;
     color: #000;
-    margin: 0.5rem 7%;
 }
 
 .back-arrow:hover {
@@ -456,7 +464,6 @@ footer {
     #input {
         width: 90%;
         font-size: 0.8rem;
-        text-align: center;
     }
 
     .display h2, .recipe-display h2 {
@@ -507,8 +514,17 @@ footer {
         margin: 2rem 1rem;
     }
 
-     .recipe .img-con {
+    .recipe .img-con {
         width: 50%;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .recipe a.name-link {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     .search form {
@@ -526,6 +542,26 @@ footer {
         text-align: center;
     }
 
+    .back-arrow {
+        font-size: 1.7rem;
+    }
+
+    .recipe .img-con {
+        width: 60%;
+    }
+
+    .imgg {
+        width: 70%;
+    }
+
+    #srch-con {
+        margin: 0 4% 2rem;
+    }
+
+    .meal {
+        padding: 2rem 1rem;
+    }
+
     #input {
         width: 90%;
         font-size: 0.9rem;
@@ -535,12 +571,34 @@ footer {
         padding: 3rem 4rem;
     }
 
+    .outter-container {
+        margin: 2rem 5%;
+    }
+
     .outter-container h1 {
         font-size: 1.5rem;
     }
 
+    .meal .meal-display p.area {
+        font-size: 1rem;
+    }
+
+    .meal .meal-display p.instruct {
+        font-size: 1rem;
+    }
+
     #get-meal {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .err-msg {
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
     }
 }
 
