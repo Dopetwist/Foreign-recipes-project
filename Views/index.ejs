@@ -32,10 +32,14 @@
         <div class="recipe1 recipe">
 
           <% if (locals.apiData) { %> 
-            <h2> <%= apiData.meals[0].strMeal %> </h2>
+            <a href="/meal/<%= apiData.meals[0].idMeal %>" class="name-link">
+              <h2> <%= apiData.meals[0].strMeal %> </h2>
+            </a>
 
             <div class="img-con">
-              <img src="<%= apiData.meals[0].strMealThumb %>" alt="Recipe Image" loading="lazy">
+              <a href="/meal/<%= apiData.meals[0].idMeal %>" class="image-link">
+                <img src="<%= apiData.meals[0].strMealThumb %>" alt="Recipe Image" loading="lazy">
+              </a>
             </div>
           <% } %> 
 
@@ -49,10 +53,14 @@
         <!-- Displays a permanent meal -->
         <div class="recipe2 recipe">
           <% if (locals.staticMeal) { %> 
-            <h2> <%= staticMeal.meals[0].strMeal %> </h2>
+            <a href="/meal/<%= staticMeal.meals[0].idMeal %>" class="name-link">
+              <h2> <%= staticMeal.meals[0].strMeal %> </h2>
+            </a>
     
             <div class="img-con">
-              <img src="<%= staticMeal.meals[0].strMealThumb %>" alt="Recipe Image" loading="lazy">
+              <a href="/meal/<%= staticMeal.meals[0].idMeal %>" class="image-link">
+                <img src="<%= staticMeal.meals[0].strMealThumb %>" alt="Recipe Image" loading="lazy">
+              </a>
             </div>
           <% } %> 
         </div>

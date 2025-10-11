@@ -267,9 +267,20 @@ ul li a:hover {
     flex-direction: column;
 }
 
+.recipe a.name-link {
+    color: var(--header-color);
+    margin-bottom: 0.7rem;
+    text-decoration: none;
+
+    /* Nested hover effect */
+    :hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
 .recipe h2 {
     font-size: 1.4rem;
-    margin-bottom: 0.7rem;
 }
 
 .recipe .img-con {
@@ -277,10 +288,18 @@ ul li a:hover {
     border-radius: 2rem;
     margin-top: 1rem;
     box-shadow: 0 0 1.5rem #808080;
+    overflow: hidden;
+}
+
+.recipe .img-con .image-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+
+    /* Nested hover effect */
+    :hover {
+        cursor: pointer;
+    }
 }
 
 .recipe img {
@@ -385,10 +404,13 @@ footer {
         text-align: left;
     }
 
-    .recipe h2 {
-        font-size: 1.1rem;
+    .recipe a.name-link {
         margin-right: 0.5rem;
         margin-left: 0.5rem;
+    }
+
+    .recipe h2 {
+        font-size: 1.1rem;
         text-align: center;
     }
 
