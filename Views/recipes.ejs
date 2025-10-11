@@ -2,15 +2,15 @@
 
     <main>
         <% if (locals.category) { %> 
-            <a href="/category-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+            <a href="/category-search" class="arrow-link"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } else if (locals.area) { %> 
-            <a href="/area-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+            <a href="/area-search" class="arrow-link"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } else if (category === null && message) { %>
-            <a href="/category-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+            <a href="/category-search" class="arrow-link"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } else if (area === null && message) { %>
-            <a href="/area-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+            <a href="/area-search" class="arrow-link"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } else { %>
-            <a href="/letter-search"><i class='bx bx-arrow-back back-arrow'></i></a>
+            <a href="/letter-search" class="arrow-link"><i class='bx bx-arrow-back back-arrow'></i></a>
         <% } %>
 
         <div class="outter-container" id="srch-con">
