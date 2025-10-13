@@ -79,7 +79,7 @@ header {
 
 #srch-con {
     justify-content: center;
-    margin: 2rem 9%;
+    margin: 2rem 7%;
 }
 
 div.container {
@@ -649,10 +649,6 @@ footer {
 /* Laptop */
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-    
-    .outter-container {
-        margin: 2rem 7%;
-    }
     
     .recipe .img-con {
         width: 50%;
