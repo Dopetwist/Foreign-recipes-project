@@ -55,7 +55,7 @@ header {
 .arrow-con {
     display: flex;
     justify-content: space-between;
-    margin: 1rem 9%;
+    margin: 1rem 7%;
 }
 
 #get-meal {
@@ -79,7 +79,7 @@ header {
 
 #srch-con {
     justify-content: center;
-    margin: 0 9% 2rem;
+    margin: 2rem 7%;
 }
 
 div.container {
@@ -101,7 +101,7 @@ div.sub-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem 7%;
+    margin: 1rem 7%;
     text-decoration: none;
 }
 
@@ -139,10 +139,6 @@ div.sub-con {
 
 .meal .meal-display p.prep {
     font-size: 1rem;
-}
-
-.arrow-con {
-    margin: 1rem 5%;
 }
 
 .single-meal {
@@ -190,11 +186,18 @@ ul li a:hover {
 }
 
 .text {
-    width: 80%;
+    width: 90%;
 }
 
-.text p {
+.text p#welcome {
+    font-size: 1.15rem;
     text-align: center;
+    font-weight: bold;
+}
+
+.text p.recipe-paragraph {
+    text-align: left;
+    color: #555;
 }
 
 .search {
@@ -403,13 +406,12 @@ footer {
         text-align: center;
     }
 
-    .text {
-        width: 90%;
+    .text p#welcome {
+        font-size: 1rem;
     }
 
-    .text p {
+    .text p.recipe-paragraph {
         font-size: 0.9rem;
-        text-align: left;
     }
 
     .recipe a.name-link {
@@ -435,6 +437,10 @@ footer {
         font-size: 1.6rem;
     }
 
+    .arrow-link {
+        margin: 1rem 4%;
+    }
+
     .search-bar form {
         width: 100%;
     }
@@ -454,7 +460,11 @@ footer {
     }
 
     #srch-con {
-        margin: 0 4% 2rem;
+        margin: 2rem 4%;
+    }
+
+    .arrow-con {
+        margin: 1rem 4%;
     }
 
     .meal {
@@ -475,7 +485,7 @@ footer {
     }
 
     .outter-container h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .meal .meal-display p.area {
@@ -496,10 +506,6 @@ footer {
         margin: 0 1rem;
     }
 
-    .outter-container {
-        margin: 2rem 5%;
-    }
-
     footer p {
         font-size: 0.8rem;
     }
@@ -518,8 +524,8 @@ footer {
         width: 50%;
     }
 
-    .text {
-        width: 90%;
+    .text p#welcome {
+        font-size: 1.1rem;
     }
 
     .recipe a.name-link {
@@ -533,7 +539,7 @@ footer {
     }
 
     .search-bar form {
-        width: 80%;
+        width: 100%;
     }
 
     .search-bar form label {
@@ -555,7 +561,15 @@ footer {
     }
 
     #srch-con {
-        margin: 0 4% 2rem;
+        margin: 2rem 4%;
+    }
+
+    .arrow-con {
+        margin: 1rem 4%;
+    }
+
+    .arrow-link {
+        margin: 1rem 4%;
     }
 
     .meal {
@@ -569,10 +583,6 @@ footer {
 
     div.sub-con {
         padding: 3rem 4rem;
-    }
-
-    .outter-container {
-        margin: 2rem 5%;
     }
 
     .outter-container h1 {
@@ -605,31 +615,34 @@ footer {
 /* Landscape Tablet */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    #srch-con {
+        margin: 2rem 6%;
+    }
+
     .outter-container h1.home-h1 {
         text-align: center;
         margin: 2rem 1rem;
     }
 
-     .recipe .img-con {
+    .recipe .img-con {
         width: 50%;
     }
 
-    .search form {
-        display: flex;
-        flex-direction: column;
+    .search {
+        width: 90%;
     }
 
-     .search-bar form {
+    .search-bar form {
         width: 80%;
     }
 
     #input {
-        width: 80%;
+        width: 100%;
         font-size: 0.9rem;
     }
 
     .outter-container h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -637,17 +650,8 @@ footer {
 
 @media (min-width: 1024px) and (max-width: 1199px) {
     
-    .outter-container {
-        margin: 2rem 7%;
-    }
-    
     .recipe .img-con {
         width: 50%;
-    }
-
-    .search form {
-        display: flex;
-        flex-direction: column;
     }
 
     .outter-container h1 {
@@ -658,8 +662,5 @@ footer {
 /* Desktops */
 
 @media (min-width: 1200px) and (max-width: 1299px) {
-    .search form {
-        display: flex;
-        flex-direction: column;
-    }
+    
 }
