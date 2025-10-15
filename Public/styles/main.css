@@ -69,6 +69,10 @@ header {
     text-decoration: underline;
 }
 
+.ing-list {
+    color: var(--second-text-color);
+}
+
 #get-meal {
     padding: 0.5rem;
     color: #fff;
