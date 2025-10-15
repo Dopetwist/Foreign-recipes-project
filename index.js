@@ -14,6 +14,7 @@ app.use(express.static("Public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+
 // The Home route that uses two URLs to display different Meals.
 app.get("/", async (req, res) => {
     try {
@@ -196,7 +197,19 @@ app.get("/meal/:idMeal", async (req, res) => {
         const result = await axios.get(API_URL + "lookup.php?i=" + uniqueID);
         const apiData = result.data;
 
-        res.render("display1.ejs", { apiData, currentPage, category, area, letter });
+        let ingredientsArray = [];
+
+        for (let i = 1; i <= 20; i++) {
+            const ingredients = apiData.meals[0][`strIngredient${i}`];
+
+            if (ingredients) {
+                ingredientsArray.push(ingredients);
+            }
+
+        }
+
+        
+        res.render("display1.ejs", { apiData, ingredientsArray, currentPage, category, area, letter });
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
