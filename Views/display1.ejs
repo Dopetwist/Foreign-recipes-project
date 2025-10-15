@@ -44,6 +44,12 @@
                 <img src="<%= item.strMealThumb %>" alt="Recipe Image">
               </div>
 
+              <% if (locals.ingredientsArray) { %> 
+                <div>
+                  <%= ingredientsArray %> 
+                </div>
+              <% } %> 
+
               <p class="prep"> Preparation Instructions: </p>
           
               <p class="instruct"> <%= item.strInstructions %> </p>
