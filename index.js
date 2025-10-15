@@ -208,8 +208,6 @@ app.get("/meal/:idMeal", async (req, res) => {
 
         }
 
-        console.log(ingredientsArray);
-
         
         res.render("display1.ejs", { apiData, ingredientsArray, currentPage, category, area, letter });
     } catch (error) {
