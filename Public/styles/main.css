@@ -58,6 +58,17 @@ header {
     margin: 1rem 7%;
 }
 
+#ingredients {
+    margin-bottom: 3rem;
+}
+
+.ing-paragraph {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
 #get-meal {
     padding: 0.5rem;
     color: #fff;
