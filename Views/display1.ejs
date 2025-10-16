@@ -47,7 +47,7 @@
               <% if (locals.ingredientsArray) { %> 
                 <div id="ingredients">
                   <p class="ing-paragraph">Ingredients</p>
-                  <p class="ing-list"> <%= ingredientsArray %> </p> 
+                  <p class="ing-list"> <%= ingredientsArray.join(", ") %> </p> 
                 </div>
               <% } %> 
 
