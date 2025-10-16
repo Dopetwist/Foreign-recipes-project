@@ -69,7 +69,19 @@ app.post("/display-search1", async (req, res) => {
         const result = await axios.get(API_URL + "search.php?s=" + userInput, { 
             params: { userInput }
         });
+
         const apiData = result.data;
+
+        let ingredientsArray = [];
+
+        for (let i = 1; i <= 20; i++) {
+            const ingredients = apiData.meals[0][`strIngredient${i}`];
+
+            if (ingredients) {
+                ingredientsArray.push(ingredients);
+            }
+
+        }
 
 
         // When there is no search result, this error message will be rendered.
@@ -78,7 +90,7 @@ app.post("/display-search1", async (req, res) => {
         }
 
         // When a search result is available, this will be rendered.
-        res.render("display1.ejs", { message: null, apiData, currentPage, category, area });
+        res.render("display1.ejs", { message: null, apiData, ingredientsArray, currentPage, category, area });
     } catch (error) {
         // This error triggers when the error response status code from the API is outside 2xx range.
         if (error.response) {
@@ -350,8 +362,19 @@ app.get("/random-search", async (req, res) => {
         const result = await axios.get(API_URL + "random.php");
         const apiData = result.data;
 
+        let ingredientsArray = [];
 
-        res.render("display1.ejs", { apiData, currentPage, category, area, random });
+        for (let i = 1; i <= 20; i++) {
+            const ingredients = apiData.meals[0][`strIngredient${i}`];
+
+            if (ingredients) {
+                ingredientsArray.push(ingredients);
+            }
+
+        }
+
+
+        res.render("display1.ejs", { apiData, ingredientsArray, currentPage, category, area, random });
     } catch (error) {
         // Error handling if the API responds with a non-2xx status code.
         if (error.response) {
