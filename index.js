@@ -74,6 +74,7 @@ app.post("/display-search1", async (req, res) => {
 
         let ingredientsArray = [];
 
+        // Loop through listed ingredients from API and push to array
         for (let i = 1; i <= 20; i++) {
             const ingredients = apiData.meals[0][`strIngredient${i}`];
 
@@ -211,6 +212,7 @@ app.get("/meal/:idMeal", async (req, res) => {
 
         let ingredientsArray = [];
 
+        // Loop through listed ingredients from API and push to array
         for (let i = 1; i <= 20; i++) {
             const ingredients = apiData.meals[0][`strIngredient${i}`];
 
@@ -364,6 +366,7 @@ app.get("/random-search", async (req, res) => {
 
         let ingredientsArray = [];
 
+        // Loop through listed ingredients from API and push to array
         for (let i = 1; i <= 20; i++) {
             const ingredients = apiData.meals[0][`strIngredient${i}`];
 
