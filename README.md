@@ -44,4 +44,5 @@ Open `http://localhost:3000` in your browser to view the app.
 
 ## Contributing 🤝
 
-Pull requests and collaborations are welcome. For major changes, please open an issue first.
+Pull requests and collaborations are welcome for improvements.  
+For major changes, please open an issue first.
