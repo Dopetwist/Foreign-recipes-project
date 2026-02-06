@@ -150,6 +150,7 @@ div.sub-con {
 
 .meal .meal-display p.instruct {
     color: var(--second-text-color);
+    white-space: pre-line;
 }
 
 .meal .meal-display p.prep {
