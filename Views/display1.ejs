@@ -55,7 +55,14 @@
           
               <p class="instruct"> <%= item.strInstructions %> </p>
             </div>
-          <% }); %>  
+
+            <div class="video-section">
+              <h3> Recipe Video 👇 </h3>
+              <p class="warning"> (Note: Some Videos might not be available!) </p>
+              
+              <a href="<%= item.strYoutube %>" target="_blank"> <h4> Click here to watch the tutorial video for better understanding! </h4> </a>
+            </div>
+          <% }); %>
         <% } %> 
 
       </div>

@@ -216,6 +216,16 @@ ul li a:hover {
     color: #555;
 }
 
+.video-section h3 {
+    margin-bottom: 0.3rem;
+}
+
+.warning {
+    font-size: 0.8rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+}
+
 .search {
     width: 90%;
     display: flex;
