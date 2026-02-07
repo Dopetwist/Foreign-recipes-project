@@ -226,6 +226,11 @@ ul li a:hover {
     margin-bottom: 1rem;
 }
 
+.video-click {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 .search {
     width: 90%;
     display: flex;
@@ -415,6 +420,10 @@ footer {
     align-items: center;
     color: var(--text-color);
     background-color: var(--second-main-color);
+}
+
+footer p {
+    font-size: 0.9rem;
 }
 
 
