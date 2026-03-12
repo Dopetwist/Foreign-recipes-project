@@ -12,7 +12,7 @@ const API_URL = "https://themealdb.com/api/json/v1/1/";
 env.config();
 
 // Middlewares.
-app.use(express.static("Public"));
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
