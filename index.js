@@ -1,13 +1,15 @@
 import express, { Route } from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import env from "dotenv";
 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const API_URL = "https://themealdb.com/api/json/v1/1/";
 
+env.config();
 
 // Middlewares.
 app.use(express.static("Public"));
