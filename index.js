@@ -74,6 +74,11 @@ app.post("/display-search1", async (req, res) => {
 
         const apiData = result.data;
 
+        // When there is no search result, this error message will be rendered.
+        if (!apiData.meals) {
+            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null, currentPage, category, area });
+        }
+
         let ingredientsArray = [];
 
         // Loop through listed ingredients from API and push to array
@@ -84,12 +89,6 @@ app.post("/display-search1", async (req, res) => {
                 ingredientsArray.push(ingredients);
             }
 
-        }
-
-
-        // When there is no search result, this error message will be rendered.
-        if (!apiData.meals) {
-            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null, currentPage, category, area });
         }
 
         // When a search result is available, this will be rendered.
