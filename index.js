@@ -74,6 +74,11 @@ app.post("/display-search1", async (req, res) => {
 
         const apiData = result.data;
 
+        // When there is no search result, this error message will be rendered.
+        if (!apiData.meals) {
+            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null, currentPage, category, area });
+        }
+
         let ingredientsArray = [];
 
         // Loop through listed ingredients from API and push to array
@@ -84,12 +89,6 @@ app.post("/display-search1", async (req, res) => {
                 ingredientsArray.push(ingredients);
             }
 
-        }
-
-
-        // When there is no search result, this error message will be rendered.
-        if (!apiData.meals) {
-            return res.render("display1.ejs", { message: "No meal data available for your search!", apiData: null, currentPage, category, area });
         }
 
         // When a search result is available, this will be rendered.
@@ -132,9 +131,16 @@ app.post("/display-search2", async (req, res) => {
 
     const userInput = req.body.input;
 
+    const alphabetRegex = /^[a-zA-Z]$/;  // Regular expression to validate that the input is a single alphabet character. It checks if the input consists of exactly one character that is either an uppercase or lowercase letter from A to Z.
+
     // Error handling message if user sends an empty input field request.
     if (!userInput) {
-        return res.render("search2.ejs", { message: "Error: Input is required!", apiData: null});
+        return res.render("search2.ejs", { message: "Input is required!", apiData: null});
+    }
+
+    // Error handling message if user sends an input that is not an alphabet.
+    if (!alphabetRegex.test(userInput)) {
+        return res.render("search2.ejs", { message: "Please enter a valid alphabet!", apiData: null, currentPage, category, area });
     }
 
     try {
@@ -142,6 +148,7 @@ app.post("/display-search2", async (req, res) => {
         const result = await axios.get(API_URL + "search.php?f=" + userInput, {
             params: { userInput }
         });
+
         const apiData = result.data;
 
         // When there is no search result, this error message will be rendered.
