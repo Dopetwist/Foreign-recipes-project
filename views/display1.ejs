@@ -34,33 +34,35 @@
 
 
         <% if (locals.apiData) { %> 
-          <% apiData.meals.forEach((item) => { %>  
-            <div class="single-meal">
-              <h1> <%= item.strMeal %> - ( Category: <%= item.strCategory %> ) </h1>
+          <% apiData.meals.forEach((item) => { %> 
+            <div class="single-box <%= apiData.meals.length > 1 ? 'multiple' : '' %>">
+              <div class="single-meal">
+                <h1> <%= item.strMeal %> - ( Category: <%= item.strCategory %> ) </h1>
 
-              <p class="area"> <%= item.strArea %> </p>
+                <p class="area"> <%= item.strArea %> </p>
 
-              <div class="imgg">
-                <img src="<%= item.strMealThumb %>" alt="Recipe Image">
+                <div class="imgg">
+                  <img src="<%= item.strMealThumb %>" alt="Recipe Image">
+                </div>
+
+                <% if (locals.ingredientsArray) { %> 
+                  <div id="ingredients">
+                    <p class="ing-paragraph">Ingredients</p>
+                    <p class="ing-list"> <%= ingredientsArray.join(", ") %> </p>  <!-- .join(", ") combines all ingredients together and separates each with a comma and a space. -->
+                  </div>
+                <% } %> 
+
+                <p class="prep"> Preparation Instructions: </p>
+            
+                <p class="instruct"> <%= item.strInstructions %> </p>
               </div>
 
-              <% if (locals.ingredientsArray) { %> 
-                <div id="ingredients">
-                  <p class="ing-paragraph">Ingredients</p>
-                  <p class="ing-list"> <%= ingredientsArray.join(", ") %> </p>  <!-- .join(", ") combines all ingredients together and separates each with a comma and a space. -->
-                </div>
-              <% } %> 
-
-              <p class="prep"> Preparation Instructions: </p>
-          
-              <p class="instruct"> <%= item.strInstructions %> </p>
-            </div>
-
-            <div class="video-section">
-              <h3> Recipe Video 👇 </h3>
-              <p class="warning"> (Note: Some Videos might not be available!) </p>
-              
-              <a href="<%= item.strYoutube %>" target="_blank"> <p class="video-click"> Click here to watch the tutorial video for better understanding! </p> </a>
+              <div class="video-section">
+                <h3> Recipe Video 👇 </h3>
+                <p class="warning"> (Note: Some Videos might not be available!) </p>
+                
+                <a href="<%= item.strYoutube %>" target="_blank"> <p class="video-click"> Click here to watch the tutorial video for better understanding! </p> </a>
+              </div>
             </div>
           <% }); %>
         <% } %> 
