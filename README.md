@@ -1,6 +1,8 @@
-# Recipes App 🍝🥪
+# Foreign Recipes 🍝🥪
 
-A Node.js project solely based on the integration of a public API on the Backend Server of the application.
+A web app that helps restaurants and chefs get access to multiple global recipes effortlessly.
+
+This Node.js project is solely based on the integration of a public API on the Backend Server.
 
 It fetches meals data from the public API and displays on the client-side for users interactions.
 
